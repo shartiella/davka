@@ -1,0 +1,1059 @@
+﻿@font-face {
+    font-family: 'FtDelicattes-Katan';
+    src: url('../fonts/FtDelicattes-Katan-0.37-400-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FtDelicattes-Gadol';
+    src: url('../fonts/FtDelicattes-Gadol-0.76-400-Regular-Dfus.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FtDelicattess-Kishut';
+    src: url('../fonts/FtDelicattess-Kishut-1.00-400-Regular.woff2') format('woff2');
+}
+
+/*הגדרות כלליות*/
+body {
+    direction: rtl;
+    background-image: url('../images/bgtexture.jpg');
+    padding-top: 10px;
+}
+
+#skip {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -400px;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 10px;
+    z-index: 1;
+    background-color: white;
+    border: solid black;
+    color: black;
+    margin: 0 auto;
+}
+
+    #skip:focus {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+section {
+    margin: 80px;
+}
+
+.button {
+    background-color: #61C0FF;
+    color: #003366;
+    border-radius: 30px;
+    font-size: inherit;
+    padding: 15px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    transition: all 0.5s;
+    display: inline-block;
+    border: 0;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+.button:hover, .button:focus {
+    background-color: yellow;
+    color: #003366;
+    border-radius: 30px;
+    transform: scale(1.15);
+    box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+}
+
+.kishut {
+    font-family: 'FtDelicattess-Kishut';
+    user-select: none;
+}
+
+    .kishut.pizuz {
+        font-size: 80px;
+        margin-top: -51px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+.inactive {
+    cursor: not-allowed;
+}
+
+.nolink {
+    cursor: default;
+}
+
+
+/*תפריט ניווט*/
+nav {
+    position: relative;
+    margin: 0 auto;
+    width: 550px;
+    font-family: 'FtDelicattes-Katan';
+    font-size: 14pt;
+    margin-top: 75px;
+    padding-bottom: 1px;
+}
+
+#logo {
+    position: absolute;
+    width: 243px;
+    margin-top: -66px;
+    margin-right: -30px;
+    z-index: 1;
+}
+
+nav img#taperoll {
+    position: absolute;
+    bottom: -36px;
+    right: -165px;
+}
+
+nav img.tapeend {
+    position: absolute;
+}
+
+nav a {
+    text-decoration: none;
+    color: #663300;
+    transition-duration: 0.2s;
+}
+
+nav ul.tape > li > a {
+    padding: 15px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    display: inline-block;
+}
+
+
+nav ul.tape {
+
+    list-style: none;
+    margin: 0;
+    padding-right: 0;
+}
+
+nav ul.gluespill {
+    list-style: none;
+    margin: 0;
+    padding-right: 0;
+}
+
+nav .tape > li {
+    background-color: rgba(213, 189, 129, 0.5);
+    display: block;
+    float: right;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+
+nav ul.tape > li > a:hover, nav ul.tape > li > a:focus {
+    background-color: rgba(213, 189, 129, 1);
+    color: white;
+}
+
+nav ul.tape li ul.gluespill {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.2s;
+    right: -35px;
+    background-image: url('../images/nav/gluespill.png');
+    background-position: bottom;
+    padding: 50px;
+    padding-top: 0px;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 3;
+}
+
+    nav ul.tape li:hover ul.gluespill, nav ul.tape li:focus-within ul.gluespill, nav ul.tape li ul.gluespill:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    nav ul.tape li ul.gluespill li {
+        clear: both;
+        width: 121px;
+        padding-top: 15px;
+        padding-bottom: 7px;
+        color: #663300;
+    }
+
+
+        nav ul.tape li ul.gluespill li a:hover, nav ul.tape li ul.gluespill li a:focus {
+            font-weight: bold;
+            text-shadow: yellow 1px 0 5px;
+        }
+
+/*תוכן הדף*/
+
+main {
+    font-family: 'FtDelicattes-Katan';
+    font-size: 14pt;
+    display: block;
+    text-align: center;
+    clear: both;
+}
+
+/*כותרות*/
+
+h1, h2, h3, h4 {
+    font-family: FtDelicattes-Gadol;
+    padding: 15px;
+    clear: both;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+/*טייפ*/
+
+div.tape {
+    margin: auto;
+    color: #663300;
+}
+
+.tape img {
+}
+
+div.tape span {
+    padding: 9px;
+    background-color: rgba(213, 189, 129, 0.5);
+    margin: -5px;
+    margin-top: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*פורמט לסקשנים*/
+.headblob {
+    border-radius: 50px;
+    display: inline-block;
+    margin: -30px;
+    padding: 35px;
+}
+
+.contentblob {
+    margin: auto;
+    display: block;
+    padding: 60px;
+    background-color: white;
+    border-radius: 30px;
+    align-items: center;
+    width: fit-content;
+    box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.15);
+}
+
+.headblob h2 {
+    display: inline-block;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+.glues a.button, .materials a.button {
+    margin-top: -14px;
+}
+
+/*כחולים*/
+
+div.blues {
+    margin: auto;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #C2DDF6;
+    border-radius: 30px;
+    align-items: center;
+    width: fit-content;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.15);
+}
+
+.blues {
+    color: #1F3560;
+}
+
+
+.blues header {
+    background-color: #C2DDF6;
+    margin-bottom: 1em;
+}
+
+
+/*דבקים*/
+
+.glues {
+    color: #333366;
+}
+
+    .glues.headblob {
+        background-color: #D9BCED;
+        position: relative;
+    }
+
+    .glues .kishut.underline {
+        color: #884AC7;
+        font-size: 6em;
+        position: absolute;
+        top: 0;
+        margin: -25px -50px;
+    }
+
+    .glues button {
+        background-color: #D9BCED;
+    }
+
+    .glues .tabs h2 {
+        color: #884AC7;
+    }
+
+    .glues ul.list {
+        background-color: #884AC7;
+    }
+
+/*חומרים*/
+
+.materials {
+    color: #1A4F38;
+}
+
+    .materials.headblob {
+        background-color: #CBE1C5;
+        position: relative;
+    }
+
+    .materials .kishut.underline {
+        color: #2BA33F;
+        font-size: 6em;
+        position: absolute;
+        top: 0;
+        margin: -25px -50px;
+    }
+
+.glues button {
+    background-color: #D9BCED;
+}
+
+.materials .tabs h2 {
+    color: #2BA33F;
+    padding-bottom: 0;
+}
+
+.materials ul.list {
+    background-color: #2BA33F;
+}
+
+/*פוטר*/
+
+footer {
+    color: #663300;
+    background-image: url('../images/footer/footerblob.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6em;
+    min-height: 17em;
+}
+
+
+footer table {
+    margin: auto;
+}
+
+footer td, footer th {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer img {
+    float: inherit;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    bottom: 0;
+}
+
+#container > footer a {
+    text-decoration: none;
+    color: #663300;
+}
+
+    #container > footer a:hover, #container > footer a:focus {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+/*אייטמים*/
+
+a.item {
+    font-family: FtDelicattes-Gadol;
+    font-size: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: 10px;
+    width: min-content;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+}
+
+    .icon img {
+        max-height: 150px;
+        max-width: 150px;
+        transition: 0.7s all ease;
+    }
+
+    .icon .colored {
+        opacity: 0;
+        transition: opacity 0.5s;
+        position: absolute;
+        right: 0;
+    }
+
+a.item:hover, a.item:focus {
+    text-shadow: yellow 1px 0 5px;
+}
+
+    a.item:hover .icon .colored, a.item:focus .icon .colored {
+        opacity: 1;
+    }
+
+/*טאבים*/
+
+.materials.tabs .buttons {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.glues.tabs .buttons {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tabs button {
+    margin: 30px;
+    padding: 15px;
+    padding-left: 62px;
+    padding-right: 52px;
+    border-radius: 30px;
+}
+
+.materials.tabs button.checked {
+    background-color: #1A4F38;
+    color: white;
+}
+
+.glues.tabs button.checked {
+    background-color: #333366;
+    color: white;
+}
+
+.tabs button .kishut {
+    font-size: 63px;
+    margin-top: -38px;
+    display: block;
+}
+
+.tabs .content {
+    width: 40%;
+    background-color: white;
+    min-height: 15em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*עמוד הבית*/
+
+.blues .banner #b1 {
+    background-image: url('../images/blues/bannerbit1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: inline-block;
+    width: 156px;
+    min-height: 145px;
+}
+
+.blues .banner #b2 {
+    background-image: url('../images/blues/bannerbit2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: inline-block;
+    width: 156px;
+    min-height: 145px;
+}
+
+.blues .banner {
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+    .blues .banner #bback {
+        color: white;
+        text-shadow: 3px 3px 3px #61c0ff;
+        background-color: #1F3560;
+        width: max-content; 
+        padding: 17px; 
+        font-size: larger;
+        height: fit-content; 
+    }
+
+h1#hindex {
+    color: white;
+    text-shadow: 3px 3px 3px #61c0ff;
+    background-color: #1F3560;
+    font-weight: normal;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size: 2em;
+}
+
+.blues #matswitch {
+    background-image: url('../images/index/switchgif.gif');
+    background-position: center;
+    height: 8em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#stopani {
+    border: 0;
+    background-color: transparent;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0px;
+    text-decoration: underline;
+}
+
+    #stopani:hover, #stopani:focus {
+        background-color: yellow;
+    }
+
+    #stopani:active {
+        background-color: white;
+    }
+
+.blues.prob {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+    .blues.prob > div {
+        padding: 25px;
+    }
+
+.prob div#probtext {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.prob img {
+    max-height: 150px;
+    max-width: 170px;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+#probtext a.button {
+    margin: 30px;
+}
+
+.kishut.arrows {
+    font-size: 8em;
+    vertical-align: middle;
+    margin: 15px;
+    color: #1F3560;
+    display: inline-block;
+    transition: all 0.2s;
+    margin-left: -0.2em;
+    margin-right: -0.2em;
+    position: relative;
+    margin-top: -65px;
+}
+
+    .kishut.arrows:hover {
+        text-shadow: yellow 1px 0 5px;
+        transform: scale(1.2);
+        transform-origin: bottom;
+    }
+
+/*    עמוד תוכן: נייר*/
+
+article#paper .kishut.underline {
+    font-size: 6em;
+    position: absolute;
+    top: 30px;
+    margin: -25px -50px;
+}
+
+article#paper h1 {
+    display: inline;
+}
+
+article#paper > header {
+    width: 100%;
+    margin-top: 3em;
+    padding-top: 50px;
+    position: relative;
+    background-image: url('../images/materials/paper/paperback.jpg');
+    background-size: cover;
+    padding-bottom: 120px;
+    height: 95px;
+    margin-bottom: 70px;
+}
+
+article#paper .info.headblob {
+    line-height: 1.5em;
+    border-radius: 50px;
+    margin-top: inherit;
+    box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+}
+
+article#paper .tabs .tablink.headblob {
+    border: 0;
+    padding: 1em;
+    transition: all 0.2s;
+}
+
+    article#paper .tabs .tablink.headblob:hover, article#paper .tabs .tablink.headblob:focus {
+        transform: scale(1.1);
+        box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+    }
+
+article#paper .tabs .content {
+    border-radius: 52px;
+    padding: 25px;
+    min-width: 50%;
+    box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+}
+
+    article#paper .tabs .content p {
+        margin: 0 auto;
+        padding: 1em;
+        line-height: 1.5em;
+    }
+
+    article#paper .tabs .content .innercontent {
+        min-height: 170px;
+    }
+
+    article#paper .tabs .content img {
+        border-radius: 40%;
+        max-width: 15em;
+        padding: 1em;
+    }
+
+    article#paper .tabs .content a {
+        text-decoration: underline;
+        color: #238533;
+    }
+
+/*    עמוד תוכן: דבק פלסטי*/
+
+article#schoolglue > header {
+    margin-top: 3em;
+    padding-top: 50px;
+    position: relative;
+    background-image: url('../images/glues/schoolglue/sghed.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 120px;
+    height: 150px;
+    margin-bottom: 70px;
+}
+
+article#schoolglue .kishut.underline {
+    font-size: 6em;
+    position: absolute;
+    top: 30px;
+    margin: -25px -50px;
+}
+
+article#schoolglue h1 {
+    display: inline;
+}
+
+article#schoolglue .info.headblob {
+    line-height: 1.5em;
+    border-radius: 50px;
+    margin-top: -85px;
+    box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+    width: 60%;
+    margin-bottom: 42px;
+}
+
+article#schoolglue .tabs .tablink.headblob {
+    border: 0;
+    padding: 1em;
+    transition: all 0.2s;
+}
+
+    article#schoolglue .tabs .tablink.headblob:hover, article#schoolglue .tabs .tablink.headblob:focus {
+        transform: scale(1.1);
+        box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+    }
+
+article#schoolglue .tabs .content {
+    border-radius: 52px;
+    padding: 25px;
+    min-width: 70%;
+    min-height: 24em;
+    box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+}
+
+    article#schoolglue .tabs .content p {
+        margin: 0 auto;
+        padding: 1em;
+        line-height: 1.5em;
+    }
+
+    article#schoolglue .tabs .content .innercontent {
+        min-height: 170px;
+    }
+
+    article#schoolglue .tabs .content img {
+        border-radius: 40%;
+        max-width: 15em;
+        padding: 1em;
+    }
+
+    article#schoolglue .tabs .content a {
+        text-decoration: underline;
+        color: #333366;
+    }
+
+/*    עמודי הכל*/
+
+main.all {
+}
+
+    main.all header {
+        width: 100%;
+        margin-top: 21px;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    main.all h2 {
+        font-family: 'FtDelicattes-Katan';
+        font-size: 2em;
+    }
+
+    main.all section > div {
+        width: 100%;
+    }
+
+    main.all section ul.list {
+        list-style: none;
+        padding: 1em;
+        padding-right: 2em;
+        padding-left: 2em;
+        border-radius: 41px;
+        width: fit-content;
+        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.15);
+        margin: auto;
+    }
+
+
+    main.all ul li {
+        padding: 0.5em;
+        background-color: white;
+        width: 7em;
+        border-radius: 20px;
+        margin: 1em auto;
+    }
+
+        main.all ul li a {
+            color: #333366;
+        }
+
+
+main#crafts h1 {
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 0;
+    padding: 10px;
+    background-color: white;
+}
+
+/*פירורי לחם*/
+
+nav.breadcrumbs {
+    margin-top: 3em;
+    margin-right: 0;
+    background-color: rgba(255,255,255,0.5);
+    width: fit-content;
+    padding-left: 3em;
+}
+
+    nav.breadcrumbs ul {
+        list-style: none;
+    }
+
+    nav.breadcrumbs li + li:before {
+        color: #663300;
+        content: "\003e";
+        margin: 0.5em;
+    }
+
+    nav.breadcrumbs ul li {
+        display: inline;
+    }
+
+        nav.breadcrumbs ul li a {
+            text-decoration: none;
+            color: rgba(0,0,0,0.5);
+        }
+
+            nav.breadcrumbs ul li a:hover, nav.breadcrumbs ul li a:focus {
+                color: black;
+                text-decoration: underline;
+            }
+
+
+/*            צרו קשר*/
+
+#contact section > div {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+    #contact section > div:first-child {
+        line-height: 2em;
+        margin: 2em;
+        padding: 40px;
+        background-color: #C2DDF6;
+        border-radius: 60px;
+        width: fit-content;
+        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.15);
+    }
+
+    #contact section > div:last-child {
+        line-height: 2em;
+        text-align: right;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 35px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        background-color: white;
+        border-radius: 30px;
+        width: fit-content;
+        box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.15);
+    }
+
+        #contact section > div:last-child h2 {
+            color: #0078C7;
+        }
+
+#contact section div form label {
+    display: block;
+    padding-bottom: 1em;
+    font-weight: bold;
+}
+
+    #contact section div form label input, #contact section div form label textarea {
+        display: block;
+        padding-bottom: 0.5em;
+        font-weight: normal;
+    }
+
+        #contact section div form label input.radiobtn {
+            display: inline-block;
+            padding-bottom: 1em;
+        }
+
+    #contact section div form label#radiokind {
+        line-height: 1.5em;
+    }
+
+#contact section {
+    padding: 0;
+    margin: 0;
+}
+
+/*מפת האתר*/
+
+#sitemap section div > ul {
+    margin-top: -70px;
+    background-color: #1F3560;
+}
+
+    #sitemap section div > ul > li {
+        background-color: #61C0FF;
+        color: #1F3560;
+        font-weight: bold;
+        width: auto;
+        box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+        font-size: 1.5em;
+    }
+
+        #sitemap section div > ul > li > a {
+            color: #1F3560;
+        }
+
+        #sitemap section div > ul > li > ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            #sitemap section div > ul > li > ul > li {
+                margin: 0;
+                padding: 2px;
+                margin: 0.5em;
+            }
+
+                #sitemap section div > ul > li > ul > li > a {
+                    color: #1F3560;
+                    font-weight: normal;
+                    font-size: 0.7em;
+                }
+
+/*                אודות*/
+
+#about section div {
+    background-color: #1F3560;
+    color: white;
+    padding: 2em;
+    border-radius: 70px;
+    width: auto;
+}
+
+#about section > div {
+    box-shadow: 7px 6px 15px 0px rgba(0,0,0,0.2);
+    width: 42em;
+    margin: auto;
+}
+
+    #about section > div > div {
+    }
+
+#about h2 {
+}
+
+#about #abt1 h3, #about #abt2 h3 {
+    font-size: 3em;
+    margin-top: 1em;
+}
+
+#about #thanks h3 {
+    font-size: 3em;
+}
+
+
+#about a {
+    color: #1F3560;
+}
+
+#about p {
+    line-height: 1.5em;
+}
+
+#about .item {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#about #ourpics {
+    width: fit-content;
+    margin: auto;
+}
+
+    #about #ourpics img {
+        width: 150px;
+        border-radius: 40px;
+        margin: 15px;
+        box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.2);
+    }
+
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+    #about ul li {
+        width: fit-content;
+        box-shadow: 4px 3px 6px 0px rgba(0,0,0,0.2);
+    }
+
+
+#about section {
+    margin: 0;
+    width: auto;
+}
+
+    #about section div#abt2 {
+        background-color: #C2DDF6;
+        color: #1F3560;
+        padding: 2em;
+        border-radius: 70px;
+        width: auto;
+    }
+
+    #about section > div#abt2 {
+        box-shadow: 7px 6px 15px 0px rgba(0,0,0,0.2);
+        width: 33em;
+        margin: auto;
+    }
+
+    #about section div#thanks {
+        background-color: white;
+        color: #1F3560;
+        padding: 2em;
+        border-radius: 70px;
+        width: auto;
+    }
+
+    #about section > div#thanks {
+        box-shadow: 7px 6px 15px 0px rgba(0,0,0,0.2);
+        width: 33em;
+        margin: 3em auto;
+    }
+
+#about ul#courses {
+}
+
+    #about ul#courses li {
+        display: inline-block;
+        margin: 0.5em;
+        background-color: #008285;
+        color: white;
+    }
