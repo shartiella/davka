@@ -21,7 +21,7 @@ function stopani() {
     buttonCount++;
 
     if (buttonCount % 2 != 0) {
-        document.getElementById("matswitch").style.backgroundImage = "url('https://shartiella.github.io/davka/images/index/switchgifstill.png')";
+        document.getElementById("matswitch").style.backgroundImage = "url(https://shartiella.github.io/davka/images/index/switchgifstill.png)";
         document.getElementById("stopani").value = "הפעלת אנימציה";
     }
     else {
