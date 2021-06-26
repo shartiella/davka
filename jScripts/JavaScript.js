@@ -21,11 +21,11 @@ function stopani() {
     buttonCount++;
 
     if (buttonCount % 2 != 0) {
-        document.getElementById("matswitch").style.backgroundImage = "url('../images/index/switchgifstill.png')";
+        document.getElementById("matswitch").style.backgroundImage = "url('https://shartiella.github.io/davka/images/index/switchgifstill.png')";
         document.getElementById("stopani").value = "הפעלת אנימציה";
     }
     else {
-        document.getElementById("matswitch").style.backgroundImage = "url('../images/index/switchgif.gif')";
+        document.getElementById("matswitch").style.backgroundImage = "url(https://shartiella.github.io/davka/images/index/switchgif.gif)";
         document.getElementById("stopani").value = "עצירת אנימציה";
     }
 }
